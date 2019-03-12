@@ -21,10 +21,12 @@ def assign_rooms(list)
 end
 
 def printer(attendes)
-  list_of_assignments = assign_rooms(attendes)
+  badge_list = batch_badge_creator(attendes)
+  room_assignments_list = assign_rooms(attendes)
   count = 0
-  while count < list_of_assignments.length
-    puts list_of_assignments[count]
+  while count < badge_list.length
+    puts badge_list[count]
+    puts room_assignments_list[count]
     count += 1
   end
 
